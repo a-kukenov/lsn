@@ -1,9 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 40px;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+html, body{
+    height: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(43, 43, 43);
 }
 span{
-    color: aqua;
+    color: rgb(125, 98, 243);
 }

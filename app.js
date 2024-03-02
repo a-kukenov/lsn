@@ -23,18 +23,34 @@ const server = http.createServer((req, res) => {
             basePath = createPath('page1.html')
             res.statusCode = 200
             break
+        case '/page2':
+            basePath = createPath('page2.html')
+            res.statusCode = 200
+            break
         case '/page3':
-            res.statusCode = 301
-            res.setHeader('Location', 'page2.html')
-            res.end()
+            basePath = createPath('page3.html')
+            res.statusCode = 200
+            break
         case '/page4':
             basePath = createPath('application/inf.json')
             res.statusCode = 200
+            res.setHeader('Content-Type', 'application/json');
             break
         case '/page5':
             basePath = createPath('text/plain.txt')
             res.statusCode = 200
+            res.setHeader('Content-Type', 'text/plain');
             break
+        case '/style.css':
+            basePath = createPath('style.css');
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'text/css');
+            break;
+        case '/script.js':
+            basePath = createPath('script.js');
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'text/javascript');
+            break;
         default:
             basePath = createPath('error.html')
             res.statusCode = 404
